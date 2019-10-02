@@ -1,3 +1,12 @@
+<?php
+  session_start();
+
+  if( !isset($_SESSION['email'])){
+    header('Location: index.php');
+  }else{
+  }
+?>
+
 <?php include 'partials/header.php'; ?>
 
 
@@ -8,21 +17,21 @@
     <tbody>
       <tr>
         <td>Full Name</td>
-        <td>Amr Fahmy</td>
+        <td><?php echo $_SESSION['name']; ?></td>
       </tr>
       <tr>
         <td>Email</td>
-        <td>AmrFahmy57@gmail.com</td>
+        <td><?php echo $_SESSION['email']; ?></td>
       </tr>
       <tr>
         <td>Gender</td>
-        <td>Male</td>
+        <td><?php echo $_SESSION['gender']; ?></td>
       </tr>
     </tbody>
   </table>
 
   <button class="btn btn-warning" type="button" name="button">Settings</button>
-  <button class="btn btn-outline-dark" type="button" name="button">Logout</button>
+  <button id="logout" class="btn btn-outline-dark" type="button" name="button">Logout</button>
 </div>
 
 

@@ -14,7 +14,7 @@
     if($res->num_rows>0){
       session_start();
       foreach ($res as $key => $value) {
-        $_SESSION['name']=$value['fname']." ",$value['lname'];
+        $_SESSION['name']=$value['fname']." ".$value['lname'];
         $_SESSION['email']=$value['email'];
         $_SESSION['gender']=$value['gender'];
 
