@@ -17,12 +17,12 @@
             <h3>Sign in</h3>
             <form id="signinform" class="" action="index.html" method="post">
               <label for="">Email</label>
-              <input placeholder="email" required type="email" name="" value="">
+              <input placeholder="email" required type="email" name="inemail" value="">
               <br>
               <label for="">Password</label>
-              <input autocomplete="off" type="password" placeholder="password" name="" value="">
+              <input autocomplete="off" type="password" placeholder="password" name="inpassword" value="">
             </form>
-            <button class="btn btn-primary"type="button" name="button">Sign in</button>
+            <button id="signin"class="btn btn-primary"type="button" name="button">Sign in</button>
           </div>
           <hr class="style-one">
 
