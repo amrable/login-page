@@ -1,0 +1,46 @@
+.style-one {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+input{
+  width: 100%;
+}
+
+button{
+  margin-top: 15px;
+
+}
+
+
+.body{
+  margin: 35px;
+}
+.light{
+  font-weight: lighter;
+}
+.description{
+  margin-top: 50px;
+  font-weight:normal;
+}
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  transition: 0.3s;
+  padding: 10px 10px 10px 10px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.center-img{
+  padding-top: 100px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.myimg{
+  width: 50%;
+}
