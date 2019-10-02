@@ -1,11 +1,13 @@
+</div>
 
 <footer >
-  <div class="foots">
+  <div class="footer">
 
   <h6>Made with ❤️ By Amr Fahmy</h6>
 </div>
 
 </footer>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

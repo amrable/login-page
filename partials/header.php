@@ -16,8 +16,10 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Connect Fish</title>
   </head>
-  <body>
+  <body >
 
+
+<div class="all">
 
 
       <nav class="navbar navbar-expand-sm navbar-light bg-light" data-toggle="affix">

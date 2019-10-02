@@ -16,7 +16,9 @@ button{
 h6{
   margin: 0;
 }
-
+.all{
+    min-height: 95vh;
+}
 
 .body{
   margin: 35px;
@@ -48,8 +50,10 @@ h6{
 .myimg{
   width: 50%;
 }
-
-footer{
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
   margin: 0;
   text-align: center;
   background-color: #333;
