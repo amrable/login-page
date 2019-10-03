@@ -20,25 +20,46 @@
 
 <div class="home description container">
   <h1>Edit Data</h1>
-  
+
 
   <table class="table">
     <tbody>
       <tr>
-        <td>Full Name</td>
-        <td> <input type="text" name="" value=" <?php echo $_SESSION['name']; ?>"></td>
+        <td> <label for="" >First Name</label> </td>
+        <td> <input  type="text" name="" value=" <?php echo $_SESSION['fname']; ?>"></td>
+        <td> <button style="margin-top:0;" class="btn btn-outline-info btn-block" type="button" name="button">Save first name</button> </td>
+
       </tr>
+        <tr>
+          <td>Second Name</td>
+          <td> <input type="text" name="" value=" <?php echo $_SESSION['lname']; ?>"></td>
+          <td> <button style="margin-top:0;"  class=" btn btn-outline-info btn-block" type="button" name="button">Save second name</button> </td>
+
+        </tr>
       <tr>
         <td>Email</td>
         <td> <input type="text" id="email" name="" value=" <?php echo $_SESSION['email']; ?>"></td>
+        <td> <button style="margin-top:0;"  class=" btn btn-outline-info btn-block" type="button" name="button">Save email</button> </td>
       </tr>
       <tr>
         <td>Gender</td>
-        <td><?php echo $_SESSION['gender']; ?></td>
+        <?php $gender=$_SESSION['gender'];
+          $radio=0;
+          if($gender=="male") $radio=0;
+          else if($gender=="female") $radio=1;
+          else $radio=2;
+
+         ?>
+        <td>
+        <input style="width:20px;" type="radio" name="gender" <?php if($radio==0) echo "checked"; ?>  value="male"> <label for="">Male</label>
+        <input style="width:20px;" type="radio" name="gender" <?php if($radio==1) echo "checked"; ?>   value="female"> Female
+        <input style="width:20px;" type="radio" name="gender" <?php if($radio==2) echo "checked"; ?>   value="other"> Other
+        </td>
+        <td> <button style="margin-top:0;"  class="btn btn-outline-info btn-block" type="button" name="button">Save gender</button> </td>
+
       </tr>
     </tbody>
   </table>
-  <button class="btn btn-info" type="button" name="button">Save Current Data</button>
   <button class="btn btn-danger" type="button" name="button">Change Password</button>
   <button class="btn btn-outline-danger"type="button" id="delete" name="button">Delete Account</button>
 </div>

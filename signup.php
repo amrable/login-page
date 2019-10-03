@@ -5,7 +5,7 @@
     $fname=$_POST['fname'];
     $lname=$_POST['lname'];
     $email=$_POST['email'];
-    $password= password_hash($_POST['password'], PASSWORD_DEFAULT); 
+    $password= password_hash($_POST['password'], PASSWORD_DEFAULT);
     $gender=$_POST['gender'];
 
     require 'connect_db.php';
@@ -16,6 +16,8 @@
     if($conn->query($sql)){
       session_start();
       $_SESSION['name']=$fname." ".$lname;
+      $_SESSION['fname']=$fname;
+      $_SESSION['lname']=$lname;
       $_SESSION['email']=$email;
       $_SESSION['gender']=$gender;
       $_SESSION['id']=$conn->insert_id;;

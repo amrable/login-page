@@ -19,6 +19,8 @@
       session_start();
 
       $_SESSION['name']=$followingdata['fname']." ".$followingdata['lname'];
+      $_SESSION['fname']=$followingdata['fname'];
+      $_SESSION['lname']=$followingdata['lname'];
       $_SESSION['email']=$followingdata['email'];
       $_SESSION['gender']=$followingdata['gender'];
       $_SESSION['id']=$followingdata['id'];
