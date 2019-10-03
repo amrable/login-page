@@ -1,6 +1,5 @@
 $("#success").hide();
 $("#fail").hide();
-
 $(document).on('click','#homebtn',function(e){
 
   window.location.assign('home.php');
@@ -35,6 +34,7 @@ $(document).on('click','#edit-fname',function(e){
       }else{
          $("#success").hide();
          $("#fail").show();
+
       }
     }
   );

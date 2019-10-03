@@ -1,4 +1,9 @@
-$(document).on('click','#changepassbtn',function(e){
+
+$("#success_pass").hide();
+$("#fail_pass").hide();
+
+
+$(document).on('click','#changepass',function(e){
   var data = new FormData(document.getElementById('changepassform'));
 
   $.ajax({
@@ -12,9 +17,13 @@ $(document).on('click','#changepassbtn',function(e){
   .done(
     function(data){
       if(data=="success"){
-         alert("Succ");
+        $("#success_pass").show();
+        $("#fail_pass").hide();
       }else{
-        alert("Wrong username or password " +data);
+        $("#success_pass").hide();
+        $("#fail_pass").show();
+        document.getElementById("failcontent").innerHTML = data;
+
       }
     }
   );

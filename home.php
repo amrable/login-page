@@ -17,7 +17,7 @@
     <tbody>
       <tr>
         <td>Full Name</td>
-        <td><?php echo $_SESSION['name']; ?></td>
+        <td><?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?></td>
       </tr>
       <tr>
         <td>Email</td>
