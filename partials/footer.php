@@ -19,5 +19,6 @@
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/home.js"></script>
     <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="js/edit.js"></script>
   </body>
 </html>

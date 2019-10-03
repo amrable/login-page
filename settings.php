@@ -26,20 +26,20 @@
     <tbody>
       <tr>
         <td> <label for="" >First Name</label> </td>
-        <td> <input  type="text" name="" value=" <?php echo $_SESSION['fname']; ?>"></td>
-        <td> <button style="margin-top:0;" class="btn btn-outline-info btn-block" type="button" name="button">Save first name</button> </td>
+        <td> <input  id="fname" type="text" name="" value="<?php echo $_SESSION['fname']; ?>"></td>
+        <td> <button id="edit-fname" style="margin-top:0;" class="btn btn-outline-info btn-block" type="button" name="button">Save first name</button> </td>
 
       </tr>
         <tr>
           <td>Second Name</td>
-          <td> <input type="text" name="" value=" <?php echo $_SESSION['lname']; ?>"></td>
-          <td> <button style="margin-top:0;"  class=" btn btn-outline-info btn-block" type="button" name="button">Save second name</button> </td>
+          <td> <input id="lname" type="text" name="" value="<?php echo $_SESSION['lname']; ?>"></td>
+          <td> <button id="edit-lname" style="margin-top:0;"  class=" btn btn-outline-info btn-block" type="button" name="button">Save second name</button> </td>
 
         </tr>
       <tr>
         <td>Email</td>
-        <td> <input type="text" id="email" name="" value=" <?php echo $_SESSION['email']; ?>"></td>
-        <td> <button style="margin-top:0;"  class=" btn btn-outline-info btn-block" type="button" name="button">Save email</button> </td>
+        <td> <input type="text" id="email-edit" name="" value="<?php echo $_SESSION['email']; ?>"></td>
+        <td> <button style="margin-top:0;"  id="edit-email" class=" btn btn-outline-info btn-block" type="button" name="button">Save email</button> </td>
       </tr>
       <tr>
         <td>Gender</td>
