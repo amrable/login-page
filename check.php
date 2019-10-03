@@ -7,7 +7,8 @@
     require 'connect_db.php';
 
     $sql = "SELECT *
-            FROM users";
+            FROM users
+            WHERE email='$email' and password='$password'";
 
     $res=$conn->query($sql);
 

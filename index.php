@@ -29,40 +29,41 @@
           <div class="card">
             <h3>Sign up</h3>
 
-            <form class="" action="index.html" method="post">
+            <form id="signupform" class="" action="index.html" method="post">
 
               <label for="">First Name</label>
               <small>*Required</small> <br>
-              <input type="text" name="" value=""> <br>
+              <input type="text" name="" value=""> <span id="fname"></span><br>
 
               <label for="">Last Name</label> <br>
               <input type="text" name="" value=""> <br>
 
               <label for="">E-mail</label>
               <small>*Required</small> <br>
-              <input type="Emails" name="" value=""> <br>
+              <input type="Emails" name="" value="" id="signupemail" onkeyup="validateEmail(this.value)"><span id="email_check"></span> <br>
 
               <label for="">Password</label>
               <small>*Required</small> <br>
-              <input  autocomplete="off" type="password" name="" value=""> <br>
+              <input  autocomplete="off" type="password" id="txtPassword" onkeyup="CheckPasswordStrength(this.value)" name="" value=""> <span id="password_strength"></span><br>
 
               <label for="">Confirm Password</label>
               <small>*Required</small> <br>
-              <input autocomplete="off" type="password" name="" value=""> <br>
+              <input autocomplete="off" type="password" id="confpassword"name="" value="" onkeyup="matchpassword(this.value)" ><span id="password_match"></span> <br>
 
               <label for="">Gender</label>
               <small>*Required</small> <br>
-              <input style="width:20px;" type="radio" name="gender" value="male"> <label for="">Male</label>
+              <input style="width:20px;" type="radio" name="gender" id="radio_1" value="male"> <label for="">Male</label>
               <input style="width:20px;" type="radio" name="gender" value="female"> Female
               <input style="width:20px;" type="radio" name="gender" value="other"> Other
-
+              <span id="gender_check"></span>
 
               <br>
-              <input style="width:20px;" type="checkbox" name="" value="">
+              <input style="width:20px;" id="checkbox" type="checkbox" name="" value="">
 
               <small>*Accepted terms and condtitions</small>
+              <span id="terms_check"></span>
             </form>
-            <button class="btn btn-outline-primary"type="button" name="button">Sign up</button>
+            <button id="signup" class="btn btn-outline-primary"type="button" name="button">Sign up</button>
           </div>
 
 
