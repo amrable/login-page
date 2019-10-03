@@ -1,3 +1,9 @@
+$(document).on('click','#homebtn',function(e){
+
+  window.location.assign('home.php');
+  e.preventDefault();
+});
+
 $(document).on('click','#edit-fname',function(e){
 
   var fname= document.getElementById('fname').value;

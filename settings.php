@@ -19,6 +19,8 @@
 <?php include 'partials/header.php'; ?>
 
 <div class="home description container">
+
+  <button class="btn btn-outline-dark" id="homebtn" type="button" name="button">Home Page</button>
   <h1>Edit Data</h1>
 
 
