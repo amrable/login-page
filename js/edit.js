@@ -1,9 +1,22 @@
+$("#success").hide();
+$("#fail").hide();
+
 $(document).on('click','#homebtn',function(e){
 
   window.location.assign('home.php');
   e.preventDefault();
 });
+$(document).on('click','#changepassbtn',function(e){
 
+  window.location.assign('change_password.php');
+  e.preventDefault();
+});
+
+$(document).on('click','#settingsbtn',function(e){
+
+  window.location.assign('settings.php');
+  e.preventDefault();
+});
 $(document).on('click','#edit-fname',function(e){
 
   var fname= document.getElementById('fname').value;
@@ -16,14 +29,18 @@ $(document).on('click','#edit-fname',function(e){
   .done(
     function(data){
       if(data=="success"){
-         window.location.reload();
+         $("#success").show();
+         $("#fail").hide();
+
       }else{
-        alert("Error occured " +data);
+         $("#success").hide();
+         $("#fail").show();
       }
     }
   );
   e.preventDefault();
 });
+
 
 $(document).on('click','#edit-lname',function(e){
 
@@ -37,9 +54,11 @@ $(document).on('click','#edit-lname',function(e){
   .done(
     function(data){
       if(data=="success"){
-         window.location.reload();
+         $("#success").show();
+         $("#fail").hide();
       }else{
-        alert("Error occured " +data);
+         $("#success").hide();
+         $("#fail").show();
       }
     }
   );
@@ -50,7 +69,6 @@ $(document).on('click','#edit-lname',function(e){
 $(document).on('click','#edit-email',function(e){
 
   var email= document.getElementById('email-edit').value;
-  alert(email);
   $.ajax({
     url: "edit_email.php",
     data:{email:email},
@@ -60,9 +78,11 @@ $(document).on('click','#edit-email',function(e){
   .done(
     function(data){
       if(data=="success"){
-         window.location.reload();
+         $("#success").show();
+         $("#fail").hide();
       }else{
-        alert("Error occured " +data);
+         $("#success").hide();
+         $("#fail").show();
       }
     }
   );
@@ -89,9 +109,11 @@ $(document).on('click','#edit-gender',function(e){
   .done(
     function(data){
       if(data=="success"){
-         window.location.reload();
+         $("#success").show();
+         $("#fail").hide();
       }else{
-        alert("Error occured " +data);
+         $("#success").hide();
+         $("#fail").show();
       }
     }
   );

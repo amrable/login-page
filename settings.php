@@ -62,7 +62,15 @@
       </tr>
     </tbody>
   </table>
-  <button class="btn btn-danger" type="button" name="button">Change Password</button>
+
+  <div id="success" class="alert alert-success hidden" role="alert">
+    This is a success alert—check it out!
+  </div>
+
+  <div id="fail"class="alert alert-danger" role="alert">
+    This is a danger alert—check it out!
+  </div>
+  <button class="btn btn-outline-danger" type="button" id="changepassbtn" name="button">Change Password</button>
   <button class="btn btn-outline-danger"type="button" id="delete" name="button">Delete Account</button>
 </div>
 <?php include 'partials/footer.php'; ?>

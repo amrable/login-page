@@ -20,5 +20,6 @@
     <script type="text/javascript" src="js/home.js"></script>
     <script type="text/javascript" src="js/settings.js"></script>
     <script type="text/javascript" src="js/edit.js"></script>
+    <script type="text/javascript" src="js/changepassword.js"></script>
   </body>
 </html>
