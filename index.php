@@ -33,18 +33,18 @@
 
               <label for="">First Name</label>
               <small>*Required</small> <br>
-              <input type="text" name="" value=""> <span id="fname"></span><br>
+              <input type="text" name="fname" value=""> <span id="fname"></span><br>
 
               <label for="">Last Name</label> <br>
-              <input type="text" name="" value=""> <br>
+              <input type="text" name="lname" value=""> <br>
 
               <label for="">E-mail</label>
               <small>*Required</small> <br>
-              <input type="Emails" name="" value="" id="signupemail" onkeyup="validateEmail(this.value)"><span id="email_check"></span> <br>
+              <input type="Emails" name="email" value="" id="signupemail" onkeyup="validateEmail(this.value)"><span id="email_check"></span> <br>
 
               <label for="">Password</label>
               <small>*Required</small> <br>
-              <input  autocomplete="off" type="password" id="txtPassword" onkeyup="CheckPasswordStrength(this.value)" name="" value=""> <span id="password_strength"></span><br>
+              <input  autocomplete="off" type="password" id="txtPassword" onkeyup="CheckPasswordStrength(this.value)" name="password" value=""> <span id="password_strength"></span><br>
 
               <label for="">Confirm Password</label>
               <small>*Required</small> <br>
