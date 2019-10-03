@@ -51,11 +51,11 @@
 
          ?>
         <td>
-        <input style="width:20px;" type="radio" name="gender" <?php if($radio==0) echo "checked"; ?>  value="male"> <label for="">Male</label>
-        <input style="width:20px;" type="radio" name="gender" <?php if($radio==1) echo "checked"; ?>   value="female"> Female
-        <input style="width:20px;" type="radio" name="gender" <?php if($radio==2) echo "checked"; ?>   value="other"> Other
+        <input style="width:20px;" type="radio" name="gender-edit" <?php if($radio==0) echo "checked"; ?>  value="male"> <label for="">Male</label>
+        <input style="width:20px;" type="radio" name="gender-edit" <?php if($radio==1) echo "checked"; ?>   value="female"> Female
+        <input style="width:20px;" type="radio" name="gender-edit" <?php if($radio==2) echo "checked"; ?>   value="other"> Other
         </td>
-        <td> <button style="margin-top:0;"  class="btn btn-outline-info btn-block" type="button" name="button">Save gender</button> </td>
+        <td> <button  id="edit-gender" style="margin-top:0;"  class="btn btn-outline-info btn-block" type="button" name="button">Save gender</button> </td>
 
       </tr>
     </tbody>

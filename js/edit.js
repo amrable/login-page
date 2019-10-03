@@ -62,3 +62,32 @@ $(document).on('click','#edit-email',function(e){
   );
   e.preventDefault();
 });
+
+
+$(document).on('click','#edit-gender',function(e){
+
+  var gender="";
+  var ele = document.getElementsByName('gender-edit');
+
+  for(i = 0; i < ele.length; i++) {
+     if(ele[i].checked) gender = ele[i].value;
+  }
+
+
+  $.ajax({
+    url: "edit_gender.php",
+    data:{gender:gender},
+    type:"POST"
+
+  })
+  .done(
+    function(data){
+      if(data=="success"){
+         window.location.reload();
+      }else{
+        alert("Error occured " +data);
+      }
+    }
+  );
+  e.preventDefault();
+});
