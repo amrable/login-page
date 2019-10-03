@@ -8,22 +8,28 @@
 
     $sql = "SELECT *
             FROM users
-            WHERE email='$email' and password='$password'";
+            WHERE email='$email' limit 1";
 
     $res=$conn->query($sql);
 
-    if($res->num_rows>0){
-      session_start();
-      foreach ($res as $key => $value) {
-        $_SESSION['name']=$value['fname']." ".$value['lname'];
-        $_SESSION['email']=$value['email'];
-        $_SESSION['gender']=$value['gender'];
+    $followingdata = $res->fetch_array(MYSQLI_ASSOC);
 
-      }
+
+    if (password_verify($password, $followingdata['password'])) {
+      session_start();
+
+      $_SESSION['name']=$followingdata['fname']." ".$followingdata['lname'];
+      $_SESSION['email']=$followingdata['email'];
+      $_SESSION['gender']=$followingdata['gender'];
+      $_SESSION['id']=$followingdata['id'];
+
       echo "success";
-    }else{
-      echo "not found";
     }
+    else {
+        echo "not found";
+    }
+
+
   }else{
     echo "error";
   }

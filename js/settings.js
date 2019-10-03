@@ -1,10 +1,12 @@
-$(document).on('click','#logout',function(e){
+$(document).on('click','#delete',function(e){
 
+  var email = document.getElementById('email').value;
   $.ajax({
-    url: "logout.php"
+    url: "delete.php",
   })
   .done(
     function(data){
+
       if(data=="success"){
          window.location.assign("index.php");
       }else{
@@ -12,11 +14,5 @@ $(document).on('click','#logout',function(e){
       }
     }
   );
-  e.preventDefault();
-});
-
-$(document).on('click','#settings',function(e){
-
-  window.location.assign("settings.php");
   e.preventDefault();
 });

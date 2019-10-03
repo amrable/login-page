@@ -30,7 +30,7 @@
     </tbody>
   </table>
 
-  <button class="btn btn-warning" type="button" name="button">Settings</button>
+  <button id="settings" class="btn btn-warning" type="button" name="button">Settings</button>
   <button id="logout" class="btn btn-outline-dark" type="button" name="button">Logout</button>
 </div>
 
