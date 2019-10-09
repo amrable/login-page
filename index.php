@@ -15,12 +15,16 @@
         <div class="col-md form">
           <div class="card">
             <h3>Sign in</h3>
+
+            <div id="fail_login" class="alert alert-danger" role="alert">
+              <p id="fail_login_content"></p>
+            </div>
             <form id="signinform" class="" action="index.html" method="post">
               <label for="">Email</label>
-              <input placeholder="email" required type="email" name="inemail" value="">
+              <input placeholder="email" required type="email" name="inemail" value="" id="login-email" onkeyup="validateEmail(this.value,'email_check_login','login-email')"><span id="email_check_login"></span>
               <br>
               <label for="">Password</label>
-              <input autocomplete="off" type="password" placeholder="password" name="inpassword" value="">
+              <input autocomplete="off" type="password" required placeholder="password" name="inpassword" value="" id="login-password"  onkeyup="notempty(this.value,'#login-password')">
             </form>
             <button id="signin"class="btn btn-primary"type="button" name="button">Sign in</button>
           </div>
@@ -28,19 +32,22 @@
 
           <div class="card">
             <h3>Sign up</h3>
-
+            <div id="fail_signup" class="alert alert-danger" role="alert">
+              <p id="fail_signup_content"></p>
+            </div>
             <form id="signupform" class="" action="index.html" method="post">
 
-              <label for="">First Name</label>
+              <label for="">Name</label>
               <small>*Required</small> <br>
-              <input type="text" name="fname" value=""> <span id="fname"></span><br>
+              <input type="text" name="name" value="" id="name-signup" onkeyup="notempty(this.value,'#name-signup')"> <span id="name-span"></span><br>
 
-              <label for="">Last Name</label> <br>
-              <input type="text" name="lname" value=""> <br>
+              <label for="">Username</label>
+              <small>*Required</small> <br>
+              <input type="text" name="uname" value="" id="username-signup" onkeyup="notempty(this.value,'#username-signup')"> <span id="username-span"></span> <br>
 
               <label for="">E-mail</label>
               <small>*Required</small> <br>
-              <input type="Emails" name="email" value="" id="signupemail" onkeyup="validateEmail(this.value)"><span id="email_check"></span> <br>
+              <input type="Emails" name="email" value="" id="signupemail" onkeyup="validateEmail(this.value,'email_check','signupemail')"><span id="email_check"></span> <br>
 
               <label for="">Password</label>
               <small>*Required</small> <br>

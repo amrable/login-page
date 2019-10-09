@@ -1,6 +1,6 @@
 <?php
 
-  if( isset( $_POST['inemail'] , $_POST['inpassword'])){
+  if( !empty( $_POST['inemail']) && !empty($_POST['inpassword'])){
     $email= $_POST['inemail'] ;
     $password= $_POST['inpassword'] ;
 
@@ -18,9 +18,8 @@
     if (password_verify($password, $followingdata['password'])) {
       session_start();
 
-      $_SESSION['name']=$followingdata['fname']." ".$followingdata['lname'];
-      $_SESSION['fname']=$followingdata['fname'];
-      $_SESSION['lname']=$followingdata['lname'];
+      $_SESSION['name']=$followingdata['name'];
+      $_SESSION['username']=$followingdata['username'];
       $_SESSION['email']=$followingdata['email'];
       $_SESSION['gender']=$followingdata['gender'];
       $_SESSION['id']=$followingdata['id'];
@@ -28,11 +27,12 @@
       echo "success";
     }
     else {
-        echo "not found";
+        echo "Email or password are invalid.";
     }
 
 
   }else{
-    echo "error";
+    if(empty( $_POST['inemail'])) echo"Fill the email field. <br>";
+    if(empty( $_POST['inpassword'])) echo"Fill the password field.";
   }
 ?>

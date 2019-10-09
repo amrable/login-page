@@ -1,23 +1,22 @@
 <?php
 
-  if( isset($_POST['fname'], $_POST['lname'], $_POST['email'], $_POST['password'], $_POST['gender'] ) ){
+  if( isset($_POST['name'], $_POST['uname'], $_POST['email'], $_POST['password'], $_POST['gender'] ) ){
 
-    $fname=$_POST['fname'];
-    $lname=$_POST['lname'];
+    $name=$_POST['name'];
+    $uname=$_POST['uname'];
     $email=$_POST['email'];
     $password= password_hash($_POST['password'], PASSWORD_DEFAULT);
     $gender=$_POST['gender'];
 
     require 'connect_db.php';
 
-    $sql = "INSERT into users (`fname` , `lname`, `email`, `password` , `gender`)
-            VALUES ( '$fname' , '$lname' , '$email', '$password', '$gender')";
+    $sql = "INSERT into users (`name` , `username`, `email`, `password` , `gender`)
+            VALUES ( '$name' , '$uname' , '$email', '$password', '$gender')";
 
     if($conn->query($sql)){
       session_start();
-      $_SESSION['name']=$fname." ".$lname;
-      $_SESSION['fname']=$fname;
-      $_SESSION['lname']=$lname;
+      $_SESSION['name']=$name;
+      $_SESSION['username']=$uname;
       $_SESSION['email']=$email;
       $_SESSION['gender']=$gender;
       $_SESSION['id']=$conn->insert_id;;

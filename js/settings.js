@@ -1,6 +1,5 @@
 $(document).on('click','#delete',function(e){
 
-  var email = document.getElementById('email').value;
   $.ajax({
     url: "delete.php",
   })
