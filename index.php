@@ -1,3 +1,13 @@
+<?php
+  session_start();
+
+  if( isset($_SESSION['email'])){
+    header('Location: home.php');
+  }else{
+  }
+?>
+
+
 <?php include 'partials/header.php'; ?>
 
   <section class="body">
@@ -55,7 +65,7 @@
 
               <label for="">Confirm Password</label>
               <small>*Required</small> <br>
-              <input autocomplete="off" type="password" id="confpassword"name="" value="" onkeyup="matchpassword(this.value)" ><span id="password_match"></span> <br>
+              <input autocomplete="off" type="password" id="confpassword"name="confpassword" value="" onkeyup="matchpassword(this.value)" ><span id="password_match"></span> <br>
 
               <label for="">Gender</label>
               <small>*Required</small> <br>

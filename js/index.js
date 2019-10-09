@@ -86,9 +86,8 @@ $(document).on('click','#signup',function(e){
         if(data=="success"){
            window.location.assign("home.php");
         }else{
-
-          alert(data);
-
+          $("#fail_signup").show();
+          document.getElementById("fail_signup_content").innerHTML = data;
 
         }
       }
