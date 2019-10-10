@@ -1,8 +1,8 @@
 <?php
 
-  if( isset( $_POST['fname'] )){
+  if( !empty( $_POST['name'] )){
 
-    $fname=$_POST['fname'];
+    $name=$_POST['name'];
 
     session_start();
 
@@ -10,21 +10,21 @@
     $id=$_SESSION['id'];
 
     $sql="UPDATE users
-          SET fname='$fname'
+          SET name='$name'
           WHERE id='$id'";
 
 
 
     if($conn->query($sql)){
       echo 'success';
-      $_SESSION['fname']=$fname;
+      $_SESSION['name']=$name;
     }else{
       echo "fail";
     }
   }
 
   else{
-    echo "Error has occured";
+    echo "You have to set a value for the name.";
   }
 
 ?>

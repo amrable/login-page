@@ -16,12 +16,12 @@ $(document).on('click','#signin',function(e){
   if(email.val()===""){
     email.css("border","2px solid red");
   }else{
-    email.css("border","1px solid #aaa");
+    email.css("border","1px solid #cccccc");
   }
   if(password.val()===""){
     password.css("border","2px solid red");
   }else{
-    password.css("border","1px solid #aaa");
+    password.css("border","1px solid #cccccc");
   }
 
   $.ajax({
@@ -66,11 +66,11 @@ $(document).on('click','#signup',function(e){
 
 
   if( email && confpassword && password && terms && name && username ){
-    $('#signupemail').css("border","1px solid #aaa");
-    $('#confpassword').css("border","1px solid #aaa");
-    $('#txtPassword').css("border","1px solid #aaa");
-    $('#name-signup').css("border","1px solid #aaa");
-    $('#username-signup').css("border","1px solid #aaa");
+    $('#signupemail').css("border","1px solid #cccccc");
+    $('#confpassword').css("border","1px solid #cccccc");
+    $('#txtPassword').css("border","1px solid #cccccc");
+    $('#name-signup').css("border","1px solid #cccccc");
+    $('#username-signup').css("border","1px solid #cccccc");
 
 
     $.ajax({
@@ -98,7 +98,7 @@ $(document).on('click','#signup',function(e){
       $('#signupemail').css("border","2px solid red");
 
     }else{
-      $('#signupemail').css("border","1px solid #aaa");
+      $('#signupemail').css("border","1px solid #cccccc");
 
     }
     if( !confpassword ){
@@ -106,7 +106,7 @@ $(document).on('click','#signup',function(e){
 
 
     }else{
-      $('#confpassword').css("border","1px solid #aaa");
+      $('#confpassword').css("border","1px solid #cccccc");
 
     }
 
@@ -114,7 +114,7 @@ $(document).on('click','#signup',function(e){
       $('#txtPassword').css("border","2px solid red");
 
     }else{
-      $('#txtPassword').css("border","1px solid #aaa");
+      $('#txtPassword').css("border","1px solid #cccccc");
 
     }
 
@@ -122,7 +122,7 @@ $(document).on('click','#signup',function(e){
       $('#name-signup').css("border","2px solid red");
 
     }else{
-      $('#name-signup').css("border","1px solid #aaa");
+      $('#name-signup').css("border","1px solid #cccccc");
 
     }
 
@@ -130,7 +130,7 @@ $(document).on('click','#signup',function(e){
       $('#username-signup').css("border","2px solid red");
 
     }else{
-      $('#username-signup').css("border","1px solid #aaa");
+      $('#username-signup').css("border","1px solid #cccccc");
 
     }
 
@@ -156,7 +156,7 @@ function notempty(text , id){
   if(text === "" ){
     $(id).css("border","2px solid red");
   }else{
-    $(id).css("border","1px solid #aaa");
+    $(id).css("border","1px solid #cccccc");
   }
 }
 
@@ -169,7 +169,7 @@ function validateEmail(email , email_span , email_border) {
   if(re.test(email)){
     $('#'+email_span).css("color","green");
     strength="Valid";
-    $('#'+email_border).css("border","1px solid #aaa");
+    $('#'+email_border).css("border","1px solid #cccccc");
 
     state=true;
   }else{
@@ -193,7 +193,7 @@ function matchpassword(password){
   if(password===first_password){
     color="green";
     strength="Match";
-    $('#confpassword').css("border","1px solid #aaa");
+    $('#confpassword').css("border","1px solid #cccccc");
 
     state_pass=true;
   }else{
@@ -252,7 +252,7 @@ function CheckPasswordStrength(password) {
         case 2:
             strength = "Good";
             color = "darkorange";
-            $('#txtPassword').css("border","1px solid #aaa");
+            $('#txtPassword').css("border","1px solid #cccccc");
 
             state_conf=true;
             break;
@@ -260,14 +260,14 @@ function CheckPasswordStrength(password) {
         case 4:
             strength = "Strong";
             color = "green";
-            $('#txtPassword').css("border","1px solid #aaa");
+            $('#txtPassword').css("border","1px solid #cccccc");
 
             state_conf=true;
             break;
         case 5:
             strength = "Very Strong";
             color = "darkgreen";
-            $('#txtPassword').css("border","1px solid #aaa");
+            $('#txtPassword').css("border","1px solid #cccccc");
 
             state_conf=true;
             break;

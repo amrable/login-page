@@ -1,32 +1,39 @@
 <?php
 
-  if( isset( $_POST['email'] )){
+  if( !empty( $_POST['email'] )){
 
     $email=$_POST['email'];
 
-    session_start();
 
-    require 'connect_db.php';
-    $id=$_SESSION['id'];
-
-    $sql="UPDATE users
-          SET email='$email'
-          WHERE id='$id'";
-
-
-
-    if($conn->query($sql)){
-      echo 'success';
-      $_SESSION['email']=$email;
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      echo "Invalid email format";
     }else{
-      echo "fail";
+      session_start();
+
+      require 'connect_db.php';
+      $id=$_SESSION['id'];
+
+      $sql="UPDATE users
+            SET email='$email'
+            WHERE id='$id'";
+
+
+
+      if($conn->query($sql)){
+        echo 'success';
+        $_SESSION['email']=$email;
+      }else{
+        echo "This email is already taken.";
+      }
+
     }
+
 
 
   }
 
   else{
-    echo "Error has occured";
+    echo "Set value for the Email.";
   }
 
 ?>

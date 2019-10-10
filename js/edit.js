@@ -16,12 +16,20 @@ $(document).on('click','#settingsbtn',function(e){
   window.location.assign('settings.php');
   e.preventDefault();
 });
-$(document).on('click','#edit-fname',function(e){
 
-  var fname= document.getElementById('fname').value;
+
+$(document).on('click','#edit-name',function(e){
+
+  var name= document.getElementById('name').value;
+
+  if(name === ""){
+    $('#name').css("border","2px solid red");
+  }else{
+    $('#name').css("border","1px solid #cccccc");
+  }
   $.ajax({
-    url: "edit_fname.php",
-    data:{fname:fname},
+    url: "edit_name.php",
+    data:{name:name},
     type:"POST"
 
   })
@@ -34,34 +42,47 @@ $(document).on('click','#edit-fname',function(e){
       }else{
          $("#success").hide();
          $("#fail").show();
+         document.getElementById("fail-edit-content").innerHTML = data;
+
 
       }
     }
   );
+
   e.preventDefault();
 });
 
 
-$(document).on('click','#edit-lname',function(e){
+$(document).on('click','#edit-uname',function(e){
 
-  var lname= document.getElementById('lname').value;
-  $.ajax({
-    url: "edit_lname.php",
-    data:{lname:lname},
-    type:"POST"
+  var uname= document.getElementById('uname').value;
 
-  })
-  .done(
-    function(data){
-      if(data=="success"){
-         $("#success").show();
-         $("#fail").hide();
-      }else{
-         $("#success").hide();
-         $("#fail").show();
+  if(uname === ""){
+    $('#uname').css("border","2px solid red");
+  }else{
+    $('#uname').css("border","1px solid #cccccc");
+  }
+    $.ajax({
+      url: "edit_uname.php",
+      data:{uname:uname},
+      type:"POST"
+
+    })
+    .done(
+      function(data){
+        if(data=="success"){
+           $("#success").show();
+           $("#fail").hide();
+        }else{
+           $("#success").hide();
+           $("#fail").show();
+           document.getElementById("fail-edit-content").innerHTML = data;
+
+        }
       }
-    }
-  );
+    );
+
+
   e.preventDefault();
 });
 
@@ -69,6 +90,14 @@ $(document).on('click','#edit-lname',function(e){
 $(document).on('click','#edit-email',function(e){
 
   var email= document.getElementById('email-edit').value;
+
+  if(email === ""){
+    $('#email-edit').css("border","2px solid red");
+  }else{
+    $('#email-edit').css("border","1px solid #cccccc");
+  }
+
+
   $.ajax({
     url: "edit_email.php",
     data:{email:email},
@@ -83,6 +112,8 @@ $(document).on('click','#edit-email',function(e){
       }else{
          $("#success").hide();
          $("#fail").show();
+         document.getElementById("fail-edit-content").innerHTML = data;
+
       }
     }
   );

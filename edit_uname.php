@@ -1,8 +1,8 @@
 <?php
 
-  if( isset( $_POST['lname'] )){
+  if( !empty( $_POST['uname'] )){
 
-    $lname=$_POST['lname'];
+    $uname=$_POST['uname'];
 
     session_start();
 
@@ -10,23 +10,23 @@
     $id=$_SESSION['id'];
 
     $sql="UPDATE users
-          SET lname='$lname'
+          SET username='$uname'
           WHERE id='$id'";
 
 
 
     if($conn->query($sql)){
       echo 'success';
-      $_SESSION['lname']=$lname;
+      $_SESSION['username']=$uname;
     }else{
-      echo "fail";
+      echo "This username is already taken.";
     }
 
 
   }
 
   else{
-    echo "Error has occured";
+    echo "You have to set a value for the username";
   }
 
 ?>

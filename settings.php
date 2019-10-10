@@ -27,15 +27,15 @@
   <table class="table">
     <tbody>
       <tr>
-        <td> <label for="" >First Name</label> </td>
-        <td> <input  id="fname" type="text" name="" value="<?php echo $_SESSION['fname']; ?>"></td>
-        <td> <button id="edit-fname" style="margin-top:0;" class="btn btn-outline-info btn-block" type="button" name="button">Save first name</button> </td>
+        <td> <label for="" >Name</label> </td>
+        <td> <input  id="name" type="text" name="" value="<?php echo $_SESSION['name']; ?>"></td>
+        <td> <button id="edit-name" style="margin-top:0;" class="btn btn-outline-info btn-block" type="button" name="button">Save name</button> </td>
 
       </tr>
         <tr>
-          <td>Second Name</td>
-          <td> <input id="lname" type="text" name="" value="<?php echo $_SESSION['lname']; ?>"></td>
-          <td> <button id="edit-lname" style="margin-top:0;"  class=" btn btn-outline-info btn-block" type="button" name="button">Save second name</button> </td>
+          <td>Userame</td>
+          <td> <input id="uname" type="text" name="" value="<?php echo $_SESSION['username']; ?>"></td>
+          <td> <button id="edit-uname" style="margin-top:0;"  class=" btn btn-outline-info btn-block" type="button" name="button">Save username</button> </td>
 
         </tr>
       <tr>
@@ -68,7 +68,7 @@
   </div>
 
   <div id="fail"class="alert alert-danger" role="alert">
-    This is a danger alert—check it out!
+    <p id="fail-edit-content"></p>
   </div>
   <button class="btn btn-outline-danger" type="button" id="changepassbtn" name="button">Change Password</button>
   <button class="btn btn-outline-danger"type="button" id="delete" name="button">Delete Account</button>
