@@ -18,7 +18,7 @@
 * Sessions are applied. [stay logged in]
 
 ## I have learnt
-- SQL
+- SQL [Applying CRUD operations]
 - PHP
 - Applying validations 
 - Working with internal APIs for validations
